@@ -4,7 +4,7 @@ let f = [];
 let ang  = 0;
 const imgSize = 40;
 let a = 0;
-const flowersCount = 50;
+const flowersCount = 40;
 let timer;
 
 function preload() {
