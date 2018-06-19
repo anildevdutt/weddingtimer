@@ -50,6 +50,7 @@ function windowResized() {
 }
 
 function createDomElements() {
+    
     let t = createElement("div");
     t.addClass("timer-card");
     
@@ -92,6 +93,7 @@ function setup() {
 }
 
 function draw() {
-    background(255);
+    clear();
+    //image(bg, 0, 0);
     updateFlower();
 }
