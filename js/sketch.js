@@ -5,6 +5,7 @@ let ang  = 0;
 const imgSize = 40;
 let a = 0;
 const flowersCount = 40;
+let timer;
 
 function preload() {
     flower = loadImage("img/flower.svg");
@@ -48,32 +49,49 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
-function setup() {
-    initFlower();
-    angleMode(DEGREES);
-    imageMode(CENTER);
-    let cnv = createCanvas(windowWidth,windowHeight);
-    cnv.class("p5canvas");
-    textSize(36);
-    textAlign(CENTER);
-    textFont("sans-serif");
-    textStyle(BOLD);
-    fill("#d600f7");
+function createDomElements() {
+    let t = createElement("div");
+    t.addClass("timer-card");
+    
+    let msg1 = createElement("h2", weddingDay.toDateString());
+    msg1.addClass("msg1");
+    
+    let msg2 = createElement("h2", "We wish you a verry happy null pointer exception");
+    msg2.addClass("msg2");
+    
+    timer = createElement("h2", "00:00:00:00");
+    timer.addClass("timer");
+    
+    t.child(msg1);
+    t.child(msg2);
+    t.child(timer);
 }
 
-function draw() {
-    background(255);
-    updateFlower();
+function startTimer() {
+    setInterval(updateTimer, 1000);
+}
 
+function updateTimer() {
     let etaMilliseconds = weddingDay - Date.now();
     let etaDays = Math.floor(etaMilliseconds / 86400000);
     let etaHours = Math.abs(Math.floor((etaMilliseconds % 86400000) / 3600000));
     let etaMinutes = Math.abs(Math.floor((etaMilliseconds % 3600000) / 60000));
     let etaSeconds = Math.abs(Math.floor((etaMilliseconds % 60000) / 1000));
-    
     let eta = ((etaDays > 9 || etaDays < 0) ? etaDays : "0" + etaDays) + ":" + ((etaHours > 9) ? etaHours : "0" + etaHours) + ":" +  ((etaMinutes > 9) ? etaMinutes : "0" + etaMinutes) + ":" + ((etaSeconds > 9) ? etaSeconds : "0" + etaSeconds);
-    //text(weddingDay.toString(), windowWidth/2, 150);
-    text("Log Horizon: A point of no return", windowWidth/2, 250);
-    text("ETA: " + eta, windowWidth/2, 350);
-    
-};
+    timer.html("ETA: " + eta);
+}
+
+function setup() {
+    initFlower();
+    angleMode(DEGREES);
+    imageMode(CENTER);
+    let cnv = createCanvas(windowWidth,windowHeight);
+    cnv.class("pscontainer");
+    createDomElements();
+    startTimer();
+}
+
+function draw() {
+    background(255);
+    updateFlower();
+}
