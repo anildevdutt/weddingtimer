@@ -86,8 +86,7 @@ function setup() {
     initFlower();
     angleMode(DEGREES);
     imageMode(CENTER);
-    let density = displayDensity();
-    pixelDensity(density);
+    pixelDensity(1);
     let cnv = createCanvas(windowWidth,windowHeight);
     cnv.class("pscontainer");
     createDomElements();
