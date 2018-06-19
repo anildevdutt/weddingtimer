@@ -47,7 +47,8 @@ function setup() {
     initFlower();
     angleMode(DEGREES);
     imageMode(CENTER);
-    createCanvas(windowWidth,600);
+    let cnv = createCanvas(windowWidth,600);
+    cnv.class("p5canvas");
     textSize(36);
     textAlign(CENTER);
     textFont("sans-serif");
@@ -56,7 +57,7 @@ function setup() {
 }
 
 function draw() {
-    background("rgba(255, 255, 204, 0.8)");
+    background(255);
     updateFlower();
 
     let etaMilliseconds = weddingDay - Date.now();
