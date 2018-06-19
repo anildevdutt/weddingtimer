@@ -4,7 +4,7 @@ let f = [];
 let ang  = 0;
 const imgSize = 40;
 let a = 0;
-const flowersCount = 40;
+const flowersCount = 50;
 let timer;
 
 function preload() {
@@ -53,7 +53,7 @@ function createDomElements() {
     let t = createElement("div");
     t.addClass("timer-card");
     
-    let msg1 = createElement("h2", weddingDay.toDateString());
+    let msg1 = createElement("h2", "It's on " + weddingDay.toDateString());
     msg1.addClass("msg1");
     
     let msg2 = createElement("h2", "We wish you a verry happy null pointer exception");

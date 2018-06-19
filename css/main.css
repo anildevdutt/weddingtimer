@@ -13,7 +13,7 @@ body {
     height: auto;
     margin: auto;
     margin-top: 1%;
-    background-color: rgba(220, 150, 220, 0.9);
+    background: linear-gradient(rgba(210, 100, 210, 0.95), rgba(220, 150, 220, 0.8));
     border-radius: 4em;
     box-shadow: 0 0 4em 0 rgb(200, 100, 200);
     
@@ -31,10 +31,14 @@ body {
 .timer, .msg1, .msg2 {
     position: relative;
     text-align: center;
-    color: white;
+    color: #911e88;
     padding: 2%;
     font-family: sans-serif;
     font-size: 2em;
     font-weight: bolder;
     
+}
+
+.timer {
+    color: #ea4c1c;
 }
