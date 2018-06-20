@@ -71,6 +71,27 @@ function createDomElements() {
     let p = [];
     let m = [];
     
+    let mi = createElement("div");
+    mi.addClass("mi");
+    
+    let fi = createElement("form");
+    
+    let ni = createInput("", "text");
+    ni.addClass("ni");
+    
+    let pi = createElement("textarea");
+    pi.addClass("pi");
+    pi.attribute("rows", 4);
+    
+    let bi = createInput("Post", "submit");
+    bi.addClass("bi");
+    
+    fi.child(ni);
+    fi.child(pi);
+    fi.child(bi);
+    mi.child(fi);
+    
+    
     m.push(createElement("div"));
     m[0].addClass("m");
     n.push(createElement("h2", "Firstname Lastname"));
