@@ -78,10 +78,12 @@ function createDomElements() {
     
     let ni = createInput("", "text");
     ni.addClass("ni");
+    ni.attribute("placeholder", "Name");
     
     let pi = createElement("textarea");
     pi.addClass("pi");
     pi.attribute("rows", 4);
+    pi.attribute("placeholder", "Write something...");
     
     let bi = createInput("Post", "submit");
     bi.addClass("bi");

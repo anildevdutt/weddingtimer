@@ -119,6 +119,10 @@ body {
     border: 1px solid #f44336;
 }
 
+.ni::placeholder {
+    color: gray;
+}
+
 .bi {
     margin: 1em;
     background-color: #FF4081;
