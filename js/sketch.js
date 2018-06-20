@@ -67,15 +67,46 @@ function createDomElements() {
     t.child(msg2);
     t.child(timer);
     
-    let m = createElement("div");
-    m.addClass("m");
+    let n = [];
+    let p = [];
+    let m = [];
     
-    let n = createElement("h2", "Firstname Lastname");
-    n.addClass("n");
-    let p = createElement("h3", "Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blahWish you a very blah blah blah");
-    p.addClass("p");
-    m.child(n);
-    m.child(p);
+    m.push(createElement("div"));
+    m[0].addClass("m");
+    n.push(createElement("h2", "Firstname Lastname"));
+    n[0].addClass("n");
+    p.push(createElement("h3", "Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blahWish you a very blah blah blah"));
+    p[0].addClass("p");    
+    m[0].child(n[0]);
+    m[0].child(p[0]);
+    
+    m.push(createElement("div"));
+    m[1].addClass("m");
+    n.push(createElement("h2", "Firstname Lastname"));
+    n[1].addClass("n");
+    p.push(createElement("h3", "Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blahWish you a very blah blah blah"));
+    p[1].addClass("p");
+    m[1].child(n[1]);
+    m[1].child(p[1]);
+    
+    m.push(createElement("div"));
+    m[2].addClass("m");
+    n.push(createElement("h2", "Firstname Lastname"));
+    n[2].addClass("n");
+    p.push(createElement("h3", "Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blahWish you a very blah blah blah"));
+    p[2].addClass("p");
+    m[2].child(n[2]);
+    m[2].child(p[2]);
+    
+    m.push(createElement("div"));
+    m[3].addClass("m");
+    n.push(createElement("h2", "Firstname Lastname"));
+    n[3].addClass("n");
+    p.push(createElement("h3", "Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blahWish you a very blah blah blah"));
+    p[3].addClass("p");
+    m[3].child(n[3]);
+    m[3].child(p[3]);
+    
 }
 
 function startTimer() {
