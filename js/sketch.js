@@ -6,9 +6,11 @@ const imgSize = 40;
 let a = 0;
 const flowersCount = 40;
 let timer;
+//let dataJson;
 
 function preload() {
     flower = loadImage("img/flower.svg");
+    //dataJson = JSON.parse("[" + pdata + "]");
 }
 
 function initFlower() {
@@ -75,15 +77,19 @@ function createDomElements() {
     mi.addClass("mi");
     
     let fi = createElement("form");
+    fi.attribute("method", "POST");
+    fi.attribute("action", "writedata.php");
     
     let ni = createInput("", "text");
     ni.addClass("ni");
     ni.attribute("placeholder", "Name");
+    ni.attribute("name", "uname");
     
     let pi = createElement("textarea");
     pi.addClass("pi");
     pi.attribute("rows", 4);
     pi.attribute("placeholder", "Write something...");
+    pi.attribute("name", "msg");
     
     let bi = createInput("Post", "submit");
     bi.addClass("bi");
@@ -93,42 +99,54 @@ function createDomElements() {
     fi.child(bi);
     mi.child(fi);
     
+    let i = 0;
+    for(post of pdata) {
+        let po = JSON.parse(post);
+        m.push(createElement("div"));
+        m[i].addClass("m");
+        n.push(createElement("h2", po["uname"]));
+        n[i].addClass("n");
+        p.push(createElement("h3", po["message"]));
+        p[i].addClass("p");    
+        m[i].child(n[i]);
+        m[i].child(p[i]);    
+        i+=1;
+    }
+    // m.push(createElement("div"));
+    // m[0].addClass("m");
+    // n.push(createElement("h2", "Firstname Lastname"));
+    // n[0].addClass("n");
+    // p.push(createElement("h3", "Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blahWish you a very blah blah blah"));
+    // p[0].addClass("p");    
+    // m[0].child(n[0]);
+    // m[0].child(p[0]);
     
-    m.push(createElement("div"));
-    m[0].addClass("m");
-    n.push(createElement("h2", "Firstname Lastname"));
-    n[0].addClass("n");
-    p.push(createElement("h3", "Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blahWish you a very blah blah blah"));
-    p[0].addClass("p");    
-    m[0].child(n[0]);
-    m[0].child(p[0]);
+    // m.push(createElement("div"));
+    // m[1].addClass("m");
+    // n.push(createElement("h2", "Firstname Lastname"));
+    // n[1].addClass("n");
+    // p.push(createElement("h3", "Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blahWish you a very blah blah blah"));
+    // p[1].addClass("p");
+    // m[1].child(n[1]);
+    // m[1].child(p[1]);
     
-    m.push(createElement("div"));
-    m[1].addClass("m");
-    n.push(createElement("h2", "Firstname Lastname"));
-    n[1].addClass("n");
-    p.push(createElement("h3", "Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blahWish you a very blah blah blah"));
-    p[1].addClass("p");
-    m[1].child(n[1]);
-    m[1].child(p[1]);
+    // m.push(createElement("div"));
+    // m[2].addClass("m");
+    // n.push(createElement("h2", "Firstname Lastname"));
+    // n[2].addClass("n");
+    // p.push(createElement("h3", "Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blahWish you a very blah blah blah"));
+    // p[2].addClass("p");
+    // m[2].child(n[2]);
+    // m[2].child(p[2]);
     
-    m.push(createElement("div"));
-    m[2].addClass("m");
-    n.push(createElement("h2", "Firstname Lastname"));
-    n[2].addClass("n");
-    p.push(createElement("h3", "Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blahWish you a very blah blah blah"));
-    p[2].addClass("p");
-    m[2].child(n[2]);
-    m[2].child(p[2]);
-    
-    m.push(createElement("div"));
-    m[3].addClass("m");
-    n.push(createElement("h2", "Firstname Lastname"));
-    n[3].addClass("n");
-    p.push(createElement("h3", "Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blahWish you a very blah blah blah"));
-    p[3].addClass("p");
-    m[3].child(n[3]);
-    m[3].child(p[3]);
+    // m.push(createElement("div"));
+    // m[3].addClass("m");
+    // n.push(createElement("h2", "Firstname Lastname"));
+    // n[3].addClass("n");
+    // p.push(createElement("h3", "Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blahWish you a very blah blah blah"));
+    // p[3].addClass("p");
+    // m[3].child(n[3]);
+    // m[3].child(p[3]);
     
 }
 
