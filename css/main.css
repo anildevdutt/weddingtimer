@@ -14,7 +14,7 @@ body {
     width: 100%;
     height: auto;
     margin: auto;
-    background: #EBF5FB;
+    background: #E3F2FD;
     /*border-radius: 4em;*/
     box-shadow: 0 0 1em 0 black;
     z-index: -2;
@@ -42,4 +42,36 @@ body {
 
 .timer {
     font-size: 2.4em;
+}
+
+
+.m {
+    width: 60%;
+    height: auto;
+    margin: auto;
+    margin-top: 1em;
+    border: 1px solid #FF4081;
+    color: white;
+    box-shadow: 0 0 0.3em black;
+    border-radius: 0.3em;
+    /*padding: 0;*/
+}
+
+.p, .n {
+    margin-top: 0;
+    padding-left: 1em;
+}
+.n {
+    background: #FF4081;
+    height: 2em;
+    line-height: 2em;
+    margin: 0;
+}
+.p {
+    background: #FAFAFA;
+    margin: 0;
+    padding-top: 1em;
+    line-height: 1.8em;
+    color: #F44336;
+    padding-bottom: 1em;
 }

@@ -66,6 +66,16 @@ function createDomElements() {
     t.child(msg1);
     t.child(msg2);
     t.child(timer);
+    
+    let m = createElement("div");
+    m.addClass("m");
+    
+    let n = createElement("h2", "Firstname Lastname");
+    n.addClass("n");
+    let p = createElement("h3", "Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blah Wish you a very blah blah blahWish you a very blah blah blah");
+    p.addClass("p");
+    m.child(n);
+    m.child(p);
 }
 
 function startTimer() {
