@@ -1,20 +1,5 @@
 <html>
     <head>
-        <?php 
-            $myfile = fopen("messages.json", "r") or $myfile = "";
-        ?>
-        <script>
-             <?php 
-                echo "let pdata=[";
-                if ($myfile) {
-                    while (($line = fgets($myfile)) !== false) {
-                        // process the line read.
-                         echo "'" , substr($line,0 , -1), "'", ",";
-                    }
-                    echo "];";
-                    fclose($myfile);
-                }
-             ?> 
         </script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

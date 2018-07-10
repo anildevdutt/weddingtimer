@@ -56,10 +56,10 @@ function createDomElements() {
     let t = createElement("div");
     t.addClass("timer-card");
     
-    let msg1 = createElement("h2", "It's on " + weddingDay.toDateString());
+    let msg1 = createElement("h2", "The time has come. It's Komali's Wedding......<br>On " + weddingDay.toDateString());
     msg1.addClass("msg1");
     
-    let msg2 = createElement("h2", "We wish you a verry happy null pointer exception");
+    let msg2 = createElement("h2", "Everyone wish her or tease her as much as you want. The time remaning is");
     msg2.addClass("msg2");
     
     timer = createElement("h2", "00:00:00:00");
@@ -69,49 +69,49 @@ function createDomElements() {
     t.child(msg2);
     t.child(timer);
     
-    let n = [];
-    let p = [];
-    let m = [];
+    // let n = [];
+    // let p = [];
+    // let m = [];
     
-    let mi = createElement("div");
-    mi.addClass("mi");
+    // let mi = createElement("div");
+    // mi.addClass("mi");
     
-    let fi = createElement("form");
-    fi.attribute("method", "POST");
-    fi.attribute("action", "writedata.php");
+    // let fi = createElement("form");
+    // fi.attribute("method", "POST");
+    // fi.attribute("action", "writedata.php");
     
-    let ni = createInput("", "text");
-    ni.addClass("ni");
-    ni.attribute("placeholder", "Name");
-    ni.attribute("name", "uname");
+    // let ni = createInput("", "text");
+    // ni.addClass("ni");
+    // ni.attribute("placeholder", "Name");
+    // ni.attribute("name", "uname");
     
-    let pi = createElement("textarea");
-    pi.addClass("pi");
-    pi.attribute("rows", 4);
-    pi.attribute("placeholder", "Write something...");
-    pi.attribute("name", "msg");
+    // let pi = createElement("textarea");
+    // pi.addClass("pi");
+    // pi.attribute("rows", 4);
+    // pi.attribute("placeholder", "Write something...");
+    // pi.attribute("name", "msg");
     
-    let bi = createInput("Post", "submit");
-    bi.addClass("bi");
+    // let bi = createInput("Post", "submit");
+    // bi.addClass("bi");
     
-    fi.child(ni);
-    fi.child(pi);
-    fi.child(bi);
-    mi.child(fi);
+    // fi.child(ni);
+    // fi.child(pi);
+    // fi.child(bi);
+    // mi.child(fi);
     
-    let i = 0;
-    for(post of pdata) {
-        let po = JSON.parse(post);
-        m.push(createElement("div"));
-        m[i].addClass("m");
-        n.push(createElement("h2", po["uname"]));
-        n[i].addClass("n");
-        p.push(createElement("h3", po["message"]));
-        p[i].addClass("p");    
-        m[i].child(n[i]);
-        m[i].child(p[i]);    
-        i+=1;
-    }
+    // let i = 0;
+    // for(post of pdata) {
+    //     let po = JSON.parse(post);
+    //     m.push(createElement("div"));
+    //     m[i].addClass("m");
+    //     n.push(createElement("h2", po["uname"]));
+    //     n[i].addClass("n");
+    //     p.push(createElement("h3", po["message"]));
+    //     p[i].addClass("p");    
+    //     m[i].child(n[i]);
+    //     m[i].child(p[i]);    
+    //     i+=1;
+    // }
     // m.push(createElement("div"));
     // m[0].addClass("m");
     // n.push(createElement("h2", "Firstname Lastname"));
